@@ -1,0 +1,116 @@
+$orange: #ffa500;
+
+.object-cover {
+  object-fit: cover;
+} /* 讓圖片保持原比例 */
+
+.object-contain {
+  object-fit: contain;
+} /* 讓圖片保持全圖 */
+
+.disabled-link {
+  pointer-events: none; /* 禁用點擊事件 */
+}
+
+.search-feedback-item:hover {
+  background-color: $orange;
+} /* 顯示搜尋結果項目hover效果 */
+/* 顯示搜尋結果效果 */
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  }
+} /* 廣告卡片Hover過度動畫效果 */
+
+.nav-item.dropdown {
+  .dropdown-item {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange;
+    }
+    &:hover::before {
+      font-weight: bold;
+    }
+  }
+} /* navbar下拉式選單項目鼠標樣式&hover效果 */
+
+.dropdown-menu {
+  .dropdown-item {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+} /* 產品頁面下拉式排序選單項目鼠標樣式&hover效果 */
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: " / ";
+  color: #6c757d;
+} /* 麵包屑自動追加分隔線 */
+
+.custom-badge {
+  position: absolute;
+  padding: 5px 20px; // 內容間距
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px; // 把箭頭移到 badge 上面
+    right: 3px; // 讓箭頭出現在右上角
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid black;
+  }
+}
+
+.navbar-nav .nav-item {
+  &:hover,
+  &.active {
+    font-weight: bold;
+  }
+  .nav-link {
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+//Navbar搜尋欄RWD
+
+@media (max-width: 850px) {
+  .search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    .search-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .search-group {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translate(-50%, 0);
+      min-width: 200px;
+      width: auto;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      z-index: 1000;
+    }
+  }
+}
