@@ -1,24 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './stylesheets/all.scss';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import axios from 'axios';
-import { HashRouter } from 'react-router-dom';
-import { store } from './store';
-import { Provider } from 'react-redux';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles/all.scss";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import axios from "axios";
+import { HashRouter } from "react-router-dom";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 
 axios.defaults.baseURL = process.env.REACT_APP_APT_URL;
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HashRouter>
-    <Provider store={store}>
-    <App />
-    </Provider>  
+      <Provider store={store}>
+        <App />
+      </Provider>
     </HashRouter>
   </React.StrictMode>
 );

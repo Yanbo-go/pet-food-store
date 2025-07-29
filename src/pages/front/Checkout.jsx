@@ -1,7 +1,7 @@
 import { useState, memo } from "react";
 import { Link, useOutletContext, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { createAsyncMessage } from "../../slice/messageSlice";
+import { createAsyncMessage } from "../../redux/slice/messageSlice";
 import axios from "axios";
 import {
   Input,

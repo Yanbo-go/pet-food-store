@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import MessageToast from "../../components/MessageToast";
 import { useDispatch } from "react-redux";
-import { createAsyncMessage } from "../../slice/messageSlice";
+import { createAsyncMessage } from "../../redux/slice/messageSlice";
 
 function FrontLayout() {
   const apiPath = process.env.REACT_APP_APT_PATH;

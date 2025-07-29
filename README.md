@@ -1,40 +1,86 @@
-# Getting Started with Create React App
+# Pet Food Store 寵物食品購物網站
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+這是一個使用 React 開發的寵物食品購物網站，具備商品瀏覽、購物車操作、訂單建立與查詢等功能，並包含簡易後台管理系統。此專案為個人作品集，展示前端開發、元件設計、狀態管理與 UI 實作能力。
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 技術架構
 
-### `npm start`
+- React 18（Hooks）
+- React Router DOM
+- React Hook Form
+- Redux Toolkit（前台狀態管理）
+- useContext + useReducer（後台狀態管理）
+- Axios
+- Bootstrap / SCSS
+- Jest / React Testing Library
+- [Create React App](https://github.com/facebook/create-react-app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 前台功能
 
-### `npm test`
+- 商品搜尋 / 篩選 / 排序
+- 商品詳情頁（可調整數量並加入購物車）
+- 購物車功能（增減數量、刪除）
+- 建立訂單表單（含表單驗證）
+- 訂單查詢功能（輸入訂單編號查詢）
+- 響應式設計（RWD）
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 後台功能
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 商品管理（新增 / 編輯 / 刪除）
+- 訂單管理（查看、修改狀態）
+- 折價券管理（新增 / 編輯 / 刪除）
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 專案結構（src/）
 
-### `npm run eject`
+<pre>
+src/
+├── _mocks_/        # 測試使用 mock 資料
+├── components/     # 可重複使用的 UI 元件
+├── hooks/          # 自定義 Hook
+├── pages/          # 各頁面元件（前台與後台）
+├── redux/          # Redux 狀態管理（前台）
+├── context/        # Context + Reducer 狀態管理（後台）
+├── styles/         # SCSS 樣式檔
+├── utils/          # 共用工具函式（格式化、驗證、常數等）
+├── services/       # API 請求模組（未來將獨立抽出）
+</pre>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 線上預覽
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+專案部署中（預計使用 Vercel 或 GitHub Pages）
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+
+## 資料來源
+
+- 商品與訂單資料透過 RESTful API 串接
+- 使用 Axios 處理資料請求與錯誤處理
+- API 由課程提供
+
+---
+
+## 測試工具
+
+- Jest
+- React Testing Library（單元測試與互動測試）
+
+---
+
+## 專案安裝與啟動
+
+```bash
+# 安裝套件
+npm install
+
+# 開發環境啟動（http://localhost:3000）
+npm start
+```

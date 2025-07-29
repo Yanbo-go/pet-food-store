@@ -3,8 +3,8 @@ import { Link, useOutletContext } from "react-router-dom";
 import axios from "axios";
 import Select from "react-select";
 import { useDispatch, useSelector } from "react-redux";
-import { createAsyncMessage } from "../../slice/messageSlice";
-import { applyCoupon, clearCoupon } from "../../slice/couponSlice";
+import { createAsyncMessage } from "../../redux/slice/messageSlice";
+import { applyCoupon, clearCoupon } from "../../redux/slice/couponSlice";
 import { CartBottomBar } from "../../components/BottomBar";
 import CouponInput from "../../components/form/CouponInput";
 

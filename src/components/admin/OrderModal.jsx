@@ -4,7 +4,7 @@ import {
   MessageContext,
   handleSuccessMessage,
   handleErrorMessage,
-} from "../../store/messageStore";
+} from "../../context/messageStore";
 
 function OrderModal({ closeOrderModal, getOrders, tempOrder }) {
   const apiPath = process.env.REACT_APP_APT_PATH;

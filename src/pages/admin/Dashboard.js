@@ -6,7 +6,7 @@ import {
   MessageContext,
   messageReducer,
   initState,
-} from "../../store/messageStore";
+} from "../../context/messageStore";
 
 function Dashboard() {
   const navigate = useNavigate();

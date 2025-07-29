@@ -3,7 +3,7 @@ import axios from "axios";
 import { useOutletContext, useParams } from "react-router-dom";
 import Loading from "../../components/Loading";
 import { useDispatch } from "react-redux";
-import { createAsyncMessage } from "../../slice/messageSlice";
+import { createAsyncMessage } from "../../redux/slice/messageSlice";
 
 function ProductsDetail() {
   const apiPath = process.env.REACT_APP_APT_PATH;

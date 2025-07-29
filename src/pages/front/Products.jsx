@@ -9,7 +9,7 @@ import {
   ProductKeywordSearch,
 } from "../../components/form/SearchBar";
 import { useDispatch } from "react-redux";
-import { createAsyncMessage } from "../../slice/messageSlice";
+import { createAsyncMessage } from "../../redux/slice/messageSlice";
 
 function Products() {
   const apiPath = process.env.REACT_APP_APT_PATH;
@@ -288,8 +288,8 @@ const SortOrder = ({
           {sortOrder === "default"
             ? "預設排序"
             : sortOrder === "price-asc"
-            ? "價格：低 → 高"
-            : "價格：高 → 低"}
+              ? "價格：低 → 高"
+              : "價格：高 → 低"}
         </button>
         <ul className="dropdown-menu" aria-labelledby="sortOrderDropdown">
           <li>
