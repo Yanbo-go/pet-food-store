@@ -118,37 +118,28 @@ const FeaturedProducts = ({ allproducts }) => {
                 className="col-6 col-sm-4 col-md-3 col-lg-2 mt-md-3 mt-lg-2 shadow-sm"
                 key={product.id}
               >
-                <div className="card border-0 mb-4">
-                  <div
-                    className="d-flex justify-content-center align-items-center"
-                    style={{ height: "150px" }}
+                <div className="card text-center border-0 mb-4 product-card">
+                  <Link
+                    className="text-decoration-none"
+                    to={`/products/${product.id}`}
                   >
-                    <img
-                      src={`${
-                        product.imageUrl === ""
-                          ? "https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
-                          : product.imageUrl
-                      }`}
-                      className="object-cover"
-                      style={{ maxHeight: "100%", maxWidth: "100%" }}
-                      alt="..."
-                    />
-                  </div>
-                  <div className="card-body p-2 mt-1">
-                    <div style={{ height: "44.4px" }}>
-                      <p>
-                        <Link
-                          className="text-decoration-none"
-                          to={`/products/${product.id}`}
-                        >
-                          {product.title}
-                        </Link>
-                      </p>
+                    <div className="d-flex justify-content-center align-items-center product-card__image-wrapper">
+                      <img
+                        src={`${
+                          product.imageUrl === ""
+                            ? "https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
+                            : product.imageUrl
+                        }`}
+                        className="object-cover product-card__image"
+                        alt="..."
+                      />
                     </div>
-                    <div
-                      className="d-flex flex-column justify-content-between"
-                      style={{ minHeight: "10px" }}
-                    >
+                    <div className="mt-3 product-card__link-wrapper">
+                      <p>{product.title}</p>
+                    </div>
+                  </Link>
+                  <div className="card-body p-0 product-card__body">
+                    <div className="d-flex flex-column">
                       <p className="text-nowrap">{`${product.price}元`}</p>
                       <p className="card-text text-muted">{product.content}</p>
                     </div>
