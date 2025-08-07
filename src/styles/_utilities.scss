@@ -101,6 +101,11 @@ $orange: #ffa500;
   }
 }
 
+.review-card {
+  min-width: 250px;
+  height: 15rem;
+}
+
 //Navbar搜尋欄RWD
 
 @media (max-width: 850px) {
