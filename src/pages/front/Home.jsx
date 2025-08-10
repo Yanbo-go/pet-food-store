@@ -175,8 +175,7 @@ const ReviewCard = () => {
         <motion.div
           ref={containerRef} //紀錄評論區內容總長度
           whileTap={{ cursor: "grabbing" }} // 滑動時變抓取手勢
-          className="overflow-hidden" //超過時不顯示滑條
-          style={{ padding: "15px" }}
+          className="overflow-hidden p-3" //超過時不顯示滑條
         >
           <motion.div
             drag="x"
@@ -218,17 +217,12 @@ const ReviewCard = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="card-hover bg-white border border-secondary rounded-3 p-4 shadow-lg "
-                style={{
-                  minWidth: "250px",
-                  height: "15rem",
-                  flex: "0 0 auto", // 防止卡片壓縮
-                }}
+                className="card-hover review-card bg-white border border-secondary rounded-3 p-4 shadow-lg "
               >
                 <h5 className="">{item.product}</h5>
                 <div className="bg-light h-75  text-muted">
                   <div>
-                    <p style={{ fontSize: "1rem" }}>{item.commenter} :</p>
+                    <p className="fs-6">{item.commenter} :</p>
                   </div>
                   <div className="text-center">
                     <span>{item.content}</span>
